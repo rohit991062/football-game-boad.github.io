@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Game Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="start">
+            <button onclick="startFirstHalf()">Start First Half</button>
+            <button onclick="startSecondHalf()" disabled id="second-half-btn">Start Second Half</button>
+        </div>
+        <div id="timer">
+            <h2 class="game-time">Time</h2>
+            <span id="minute">00</span>:<span id="seconds">00</span>
+        </div>
+        <div id="round">
+            <h2 id="half">First Half</h2>
+        </div>
+        <div class="score">
+            <div id="home">
+                <h2>Home</h2>
+                <div id="home-score">
+                    <span>00</span>
+                </div>
+                <button onclick="incrementScore('home')" disabled id="home-goal-btn">Goal</button>
+            </div>
+            <div id="guest">
+                <h2>Guest</h2>
+                <div id="guest-score">
+                    <span>00</span>
+                </div>
+                <button onclick="incrementScore('guest')" disabled id="guest-goal-btn">Goal</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
